@@ -9,9 +9,10 @@ release
 see
 working
 
-Object| Messages|
-person|         |
-bike| is it working, condition of bike|
-docking station|can i realese a bike|
+Object | Messages
+------ | --------
+person|         
+bike| is it working, condition of bike
+docking station|can I release a bike
 
-[see diagram by clicking here](https://imgur.com/a/33HQjLf)
+![User Stories Diagram](https://i.imgur.com/TfR3p0q.jpg)
