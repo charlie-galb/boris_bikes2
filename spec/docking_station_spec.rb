@@ -9,4 +9,8 @@ describe DockingStation do
   it "can realease bike" do
     expect(DockingStation.new).to respond_to (:release_bike)
   end
+
+  it "releases a new bike when the 'release_bike' method is called" do
+    expect(DockingStation.new.release_bike).to be_an_instance_of Bike
+  end
 end
