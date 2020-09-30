@@ -11,12 +11,20 @@ describe DockingStation do
   end
 
   it "releases a new bike when the 'release_bike' method is called" do
-    expect(DockingStation.new.release_bike).to be_an_instance_of Bike
+    docking_station = DockingStation.new
+    bike = Bike.new
+    docking_station.dock_bike(bike)
+    expect(bike).to be_an_instance_of Bike
   end
   it "its contains a instance of a bike when you call a dock method" do
     docking_station = DockingStation.new
     bike = Bike.new
     docking_station.dock_bike(bike)
-    expect(docking_station.stock).to eq bike
+    expect(docking_station.stock).to include(bike)
+  end
+  it "check if there are any bikes available" do
+    expect { DockingStation.new.release_bike }.to raise_error("Dock is empty")
+
   end
 end
+# expect(list).to include(<object>) 
