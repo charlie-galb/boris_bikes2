@@ -17,6 +17,6 @@ describe DockingStation do
     docking_station = DockingStation.new
     bike = Bike.new
     docking_station.dock_bike(bike)
-    expect(@stock).to eq bike
+    expect(docking_station.stock).to eq bike
   end
 end

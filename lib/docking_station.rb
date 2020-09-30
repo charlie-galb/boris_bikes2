@@ -2,7 +2,7 @@ require_relative 'bike.rb'
 
 
 class DockingStation
-  # attr_reader :stock
+  attr_reader :stock
   def release_bike
     Bike.new
   end
