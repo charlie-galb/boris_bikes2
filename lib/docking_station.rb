@@ -12,6 +12,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
+    return raise "Dock is full" if !@stock.empty?
     @stock.push(bike)
   end
 
