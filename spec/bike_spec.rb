@@ -8,4 +8,8 @@ describe Bike do
   it "can release bike" do
     expect(Bike.new).to respond_to (:working?)
   end
+
+  it "Says if it is working or not" do
+    expect(Bike.new.working?).to eq(true)
+  end
 end
