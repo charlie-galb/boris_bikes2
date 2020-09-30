@@ -13,4 +13,10 @@ describe DockingStation do
   it "releases a new bike when the 'release_bike' method is called" do
     expect(DockingStation.new.release_bike).to be_an_instance_of Bike
   end
+  it "its contains a instance of a bike when you call a dock method" do
+    docking_station = DockingStation.new
+    bike = Bike.new
+    docking_station.dock_bike(bike)
+    expect(@stock).to eq bike
+  end
 end
